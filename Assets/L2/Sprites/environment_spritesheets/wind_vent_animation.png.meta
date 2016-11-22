@@ -1,21 +1,17 @@
 fileFormatVersion: 2
-guid: 931cfeb9d98234d4983b418a82434ba9
-timeCreated: 1480574700
+guid: 43f78b7afd2684242b1075e539046dae
+timeCreated: 1480712058
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ground_base_5M
-    21300002: back_base_medium
-    21300004: ground_bases_2
-    21300006: ground_base_4L
-    21300008: back_base_small
-    21300010: ground_base_1S
-    21300012: edgeR
-    21300014: edgeL
-    21300016: ground_base_2M
-    21300018: ground_bases_10
-    21300020: ground_base_3L
-    21300022: back_base_large
+    21300000: wind_vent_animation_0
+    21300002: wind_vent_animation_1
+    21300004: wind_vent_animation_2
+    21300006: wind_vent_animation_3
+    21300008: wind_vent_animation_4
+    21300010: wind_vent_animation_5
+    21300012: wind_vent_animation_6
+    21300014: wind_vent_animation_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -65,158 +61,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_base_5M
+      name: wind_vent_animation_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 966
-        width: 959
-        height: 276
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: back_base_medium
-      rect:
-        serializedVersion: 2
-        x: 1255
-        y: 939
-        width: 828
-        height: 299
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ground_bases_2
-      rect:
-        serializedVersion: 2
-        x: 586
-        y: 959
-        width: 5
-        height: 4
+        x: 0
+        y: 3300
+        width: 621
+        height: 1100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ground_base_4L
+      name: wind_vent_animation_1
       rect:
         serializedVersion: 2
-        x: 5
-        y: 644
-        width: 1432
-        height: 232
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: back_base_small
-      rect:
-        serializedVersion: 2
-        x: 1475
-        y: 651
-        width: 447
-        height: 272
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ground_base_1S
-      rect:
-        serializedVersion: 2
-        x: 1938
-        y: 654
-        width: 446
-        height: 271
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: edgeR
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 322
-        width: 669
-        height: 285
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: edgeL
-      rect:
-        serializedVersion: 2
-        x: 877
-        y: 381
-        width: 622
-        height: 234
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ground_base_2M
-      rect:
-        serializedVersion: 2
-        x: 1591
-        y: 317
-        width: 831
-        height: 295
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ground_bases_10
-      rect:
-        serializedVersion: 2
-        x: 1955
-        y: 315
-        width: 33
-        height: 12
+        x: 621
+        y: 3300
+        width: 621
+        height: 1100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ground_base_3L
+      name: wind_vent_animation_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 13
-        width: 1363
-        height: 295
+        x: 0
+        y: 2200
+        width: 621
+        height: 1100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: back_base_large
+      name: wind_vent_animation_3
       rect:
         serializedVersion: 2
-        x: 1406
-        y: 18
-        width: 1085
-        height: 297
+        x: 621
+        y: 2200
+        width: 621
+        height: 1100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_vent_animation_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 621
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_vent_animation_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1100
+        width: 621
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_vent_animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 621
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_vent_animation_7
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 0
+        width: 621
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

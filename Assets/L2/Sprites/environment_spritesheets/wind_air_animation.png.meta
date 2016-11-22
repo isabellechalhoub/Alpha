@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 0b0d0585b97d29b44ad1cf4ef0abd96b
-timeCreated: 1480551207
+guid: 31016ac654a1e0845bf16fe8409d0da5
+timeCreated: 1480711795
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: face
-    21300002: outer_lining
-    21300004: rebar
-    21300006: inner_stuff
+    21300000: wind_air_animation_0
+    21300002: wind_air_animation_1
+    21300004: wind_air_animation_2
+    21300006: wind_air_animation_3
+    21300008: wind_air_animation_4
+    21300010: wind_air_animation_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,54 +59,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: face
+      name: wind_air_animation_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 379
-        width: 478
-        height: 543
+        x: 0
+        y: 2500
+        width: 472
+        height: 1250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: outer_lining
+      name: wind_air_animation_1
       rect:
         serializedVersion: 2
-        x: 506
-        y: 366
-        width: 478
-        height: 543
+        x: 472
+        y: 2500
+        width: 472
+        height: 1250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rebar
+      name: wind_air_animation_2
       rect:
         serializedVersion: 2
-        x: 376
-        y: 28
-        width: 179
-        height: 225
+        x: 0
+        y: 1250
+        width: 472
+        height: 1250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: inner_stuff
+      name: wind_air_animation_3
       rect:
         serializedVersion: 2
-        x: 693
-        y: 38
-        width: 197
-        height: 254
+        x: 472
+        y: 1250
+        width: 472
+        height: 1250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_air_animation_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 472
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wind_air_animation_5
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 472
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

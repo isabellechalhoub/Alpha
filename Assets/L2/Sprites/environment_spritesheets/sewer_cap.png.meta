@@ -1,13 +1,11 @@
 fileFormatVersion: 2
-guid: 0b0d0585b97d29b44ad1cf4ef0abd96b
-timeCreated: 1480551207
+guid: 52b9043132fd3e04ea0abe734e1424e4
+timeCreated: 1480718789
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: face
-    21300002: outer_lining
-    21300004: rebar
-    21300006: inner_stuff
+    21300000: sewer_cap_0
+    21300002: sewer_cap_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,54 +55,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: face
+      name: sewer_cap_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 379
-        width: 478
-        height: 543
+        x: 16
+        y: 9
+        width: 614
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: outer_lining
+      name: sewer_cap_1
       rect:
         serializedVersion: 2
-        x: 506
-        y: 366
-        width: 478
-        height: 543
+        x: 751
+        y: 10
+        width: 614
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rebar
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 28
-        width: 179
-        height: 225
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: inner_stuff
-      rect:
-        serializedVersion: 2
-        x: 693
-        y: 38
-        width: 197
-        height: 254
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
