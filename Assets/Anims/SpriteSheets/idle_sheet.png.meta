@@ -1,0 +1,1056 @@
+fileFormatVersion: 2
+guid: 9d9bdbaa501511d40b0611ee5e57f986
+timeCreated: 1479812288
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: idle_sheet_0
+    21300002: idle_sheet_1
+    21300004: idle_sheet_2
+    21300006: idle_sheet_3
+    21300008: idle_sheet_4
+    21300010: idle_sheet_5
+    21300012: idle_sheet_6
+    21300014: idle_sheet_7
+    21300016: idle_sheet_8
+    21300018: idle_sheet_9
+    21300020: idle_sheet_10
+    21300022: idle_sheet_11
+    21300024: idle_sheet_12
+    21300026: idle_sheet_13
+    21300028: idle_sheet_14
+    21300030: idle_sheet_15
+    21300032: idle_sheet_16
+    21300034: idle_sheet_17
+    21300036: idle_sheet_18
+    21300038: idle_sheet_19
+    21300040: idle_sheet_20
+    21300042: idle_sheet_21
+    21300044: idle_sheet_22
+    21300046: idle_sheet_23
+    21300048: idle_sheet_24
+    21300050: idle_sheet_25
+    21300052: idle_sheet_26
+    21300054: idle_sheet_27
+    21300056: idle_sheet_28
+    21300058: idle_sheet_29
+    21300060: idle_sheet_30
+    21300062: idle_sheet_31
+    21300064: idle_sheet_32
+    21300066: idle_sheet_33
+    21300068: idle_sheet_34
+    21300070: idle_sheet_35
+    21300072: idle_sheet_36
+    21300074: idle_sheet_37
+    21300076: idle_sheet_38
+    21300078: idle_sheet_39
+    21300080: idle_sheet_40
+    21300082: idle_sheet_41
+    21300084: idle_sheet_42
+    21300086: idle_sheet_43
+    21300088: idle_sheet_44
+    21300090: idle_sheet_45
+    21300092: idle_sheet_46
+    21300094: idle_sheet_47
+    21300096: idle_sheet_48
+    21300098: idle_sheet_49
+    21300100: idle_sheet_50
+    21300102: idle_sheet_51
+    21300104: idle_sheet_52
+    21300106: idle_sheet_53
+    21300108: idle_sheet_54
+    21300110: idle_sheet_55
+    21300112: idle_sheet_56
+    21300114: idle_sheet_57
+    21300116: idle_sheet_58
+    21300118: idle_sheet_59
+    21300120: idle_sheet_60
+    21300122: idle_sheet_61
+    21300124: idle_sheet_62
+    21300126: idle_sheet_63
+    21300128: idle_sheet_64
+    21300130: idle_sheet_65
+    21300132: idle_sheet_66
+    21300134: idle_sheet_67
+    21300136: idle_sheet_68
+    21300138: idle_sheet_69
+    21300140: idle_sheet_70
+    21300142: idle_sheet_71
+    21300144: idle_sheet_72
+    21300146: idle_sheet_73
+    21300148: idle_sheet_74
+    21300150: idle_sheet_76
+    21300152: idle_sheet_77
+    21300154: idle_sheet_78
+    21300156: idle_sheet_80
+    21300158: idle_sheet_81
+    21300160: idle_sheet_82
+    21300162: idle_sheet_83
+    21300164: idle_sheet_84
+    21300166: idle_sheet_86
+    21300168: idle_sheet_87
+    21300170: idle_sheet_88
+    21300172: idle_sheet_91
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 512
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 4720
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 4130
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 3540
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 2950
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 2360
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 1770
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 1180
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 4404
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 590
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 0
+        width: 734
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

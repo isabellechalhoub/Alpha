@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 06695dd7b17ee0e478fddfc53b613f94
+timeCreated: 1479796676
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rbase1
+    21300002: road
+    21300004: manhole_road_2
+    21300006: L_base1
+    21300008: manhole_road_4
+    21300010: road_base
+    21300012: L_base2
+    21300014: Lbase3
+    21300016: rubble2
+    21300018: rim_back
+    21300020: rim_front
+    21300022: manhole_road_13
+    21300024: manhole
+    21300026: road_cover
+    21300028: rubble1
+    21300030: background_bit
+    21300032: Rbase2
+    21300034: manhole_road_23
+    21300036: manhole_road_24
+    21300038: road_side_bit
+    21300040: road_base_front
+    21300042: road_cover_back
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rbase1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 928
+        width: 155
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 847
+        width: 991
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manhole_road_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 893
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: L_base1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 725
+        width: 108
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manhole_road_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 797
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road_base
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 622
+        width: 872
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: L_base2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 599
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lbase3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 598
+        width: 81
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rubble2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 414
+        width: 233
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rim_back
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 521
+        width: 174
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rim_front
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 509
+        width: 171
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manhole_road_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 487
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manhole
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 394
+        width: 177
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road_cover
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 197
+        width: 439
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rubble1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 262
+        width: 304
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_bit
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 201
+        width: 185
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rbase2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 72
+        width: 116
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road_side_bit
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 30
+        width: 640
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road_base_front
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 88
+        width: 170
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: road_cover_back
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 316
+        width: 437
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
