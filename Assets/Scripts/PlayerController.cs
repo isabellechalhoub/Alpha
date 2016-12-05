@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
     #region Vars
+    private Animator animator;
     public float slashSpeed;
     private Rigidbody2D swordrb;
 	public GameObject gameCamera;
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
 	private bool playerControl = true;
 	private int currHealth = 0;
 	public CharacterController2D _controller;
-	private AnimationController2D _animator;
+	private AnimationController2D _anim_control;
     private bool swinging = false;
     private bool pause = false;
     private bool wind;
@@ -65,7 +66,8 @@ public class PlayerController : MonoBehaviour
 		coll = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D> ();
 		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
 		_controller = gameObject.GetComponent<CharacterController2D>();
-		_animator = gameObject.GetComponent<AnimationController2D>();
+		_anim_control = gameObject.GetComponent<AnimationController2D>();
+        animator = gameObject.GetComponent<Animator>();
 
         journal = GameObject.Find("Journal");
         jar = GameObject.Find("Jar");
@@ -96,7 +98,7 @@ public class PlayerController : MonoBehaviour
 		gameOverPanel.SetActive(false);
         pausePanel.SetActive(false);
 		currHealth = health;
-        _animator.setAnimation("NewFall");
+        _anim_control.setAnimation("NewFall");
         windy = false;
         topwind = false;
 
@@ -123,7 +125,8 @@ public class PlayerController : MonoBehaviour
                 Time.timeScale = 0;
                 pausePanel.SetActive(true);
                 playerControl = false;
-                _animator.setAnimation("NewIdle");
+                animator.SetBool("isIdle", true);
+                //_animator.setAnimation("NewIdle");
             }
             else
             {
@@ -159,11 +162,15 @@ public class PlayerController : MonoBehaviour
 			velocity.x = -walkSpeed;
 			if (_controller.isGrounded && !floatin) 
 			{
-				_animator.setAnimation ("NewWalk");
+                animator.SetBool("isWalking", true);
+				//_anim_control.setAnimation ("NewWalk");
 				//_animator.setFacing ("Left");
 			}
+            else if (!floatin){
+                animator.SetBool("isFalling", true);
+            }
             if (!floatin)
-                _animator.setFacing("Left");
+                _anim_control.setFacing("Left");
 		}
         //else if (Input.GetKeyUp(KeyCode.LeftArrow) && !shieldin && !swinging)
         //{
@@ -178,11 +185,15 @@ public class PlayerController : MonoBehaviour
 			velocity.x = walkSpeed;
 			if (_controller.isGrounded && !floatin) 
 			{
-				_animator.setAnimation ("NewWalk");
+                animator.SetBool("isWalking", true);
+				//_anim_control.setAnimation ("NewWalk");
 				//_animator.setFacing ("Right");
 			}
+            else if (!floatin){
+                animator.SetBool("isFalling", true);
+            }
             if (!floatin)
-                _animator.setFacing("Right");
+                _anim_control.setFacing("Right");
 		}
         //else if (Input.GetKeyUp(KeyCode.RightArrow) && !shieldin && !swinging)
         //{
@@ -199,7 +210,8 @@ public class PlayerController : MonoBehaviour
 			if (_controller.isGrounded && currHealth != 0 && !shieldin && !swinging) 
 			{
                 velocity.x = 0;
-                _animator.setAnimation("NewIdle");
+                animator.SetBool("isWalking", false);
+                //_anim_control.setAnimation("NewIdle");
 			}
 		}
 		#endregion
@@ -208,13 +220,17 @@ public class PlayerController : MonoBehaviour
 		// Space bar - Jump
 		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded && !swinging && !floatin) 
 		{
-			_animator.setAnimation("NewJump");
+            animator.SetTrigger("isJumping");
+			//_anim_control.setAnimation("NewJump");
 			velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
 		} 
 		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 
 		{
-			if (!floatin)
-            	_animator.setAnimation("NewDeploy");
+            if (!floatin) 
+            {
+                animator.SetBool("isFloating", true);
+                //_anim_control.setAnimation("NewDeploy");
+            }
             if (topwind) { }
             else if (!windy)
                 velocity.y = -2;
@@ -224,11 +240,15 @@ public class PlayerController : MonoBehaviour
 		{
 			if (!_controller.isGrounded)
 			{
-				_animator.setAnimation("NewFall");
+                animator.SetBool("isFalling", true);
+                animator.SetBool("isFloating", false);
+				//_anim_control.setAnimation("NewFall");
                 wind = false;
 			}
             else
             {
+                animator.SetBool("isFloating", false);
+                animator.SetBool("isFalling", false);
                 //_animator.setAnimation("Land");
             }
             if (!wind)
@@ -251,15 +271,17 @@ public class PlayerController : MonoBehaviour
         //} else
         //	shieldin = false;
 
-        if (Input.GetKey(KeyCode.X) && !swinging)
+        if (Input.GetKeyDown(KeyCode.X) && !swinging)
         {
-            _animator.setAnimation("NewPreblock");
+            animator.SetBool("isBlocking", true);
+            //_anim_control.setAnimation("NewPreblock");
             shieldin = true;
             shield.SetActive(true);
         }
-        else if (Input.GetKeyUp(KeyCode.X) && shieldin)
+        else if (Input.GetKeyUp(KeyCode.X))
         {
-            _animator.setAnimation("NewUnblock");
+            animator.SetBool("isBlocking", false);
+            //_anim_control.setAnimation("NewUnblock");
             shieldin = false;
             shield.SetActive(false);
         }
@@ -272,9 +294,10 @@ public class PlayerController : MonoBehaviour
 
         #region sword swing
         // swing dat sword bb
-        if (Input.GetKey(KeyCode.C) && !shieldin)
+        if (Input.GetKeyDown(KeyCode.C) && !shieldin)
         {
-            _animator.setAnimation("NewSlash");
+            animator.SetTrigger("isSlashing");
+            //_anim_control.setAnimation("NewSlash");
             swinging = true;
             sword.SetActive(true);
 
@@ -396,7 +419,8 @@ public class PlayerController : MonoBehaviour
 	private void Winning()
 	{
 		playerControl = false;
-		_animator.setAnimation("Idle");
+        animator.SetBool("isIdle", true);
+        //_anim_control.setAnimation("Idle");
 		winPanel.SetActive(true);
 	}
 
@@ -424,7 +448,8 @@ public class PlayerController : MonoBehaviour
 	// Play death animation
 	private void PlayerDeath()
 	{
-        _animator.setAnimation("NewIdle");
+        animator.SetBool("isIdle", true);
+        //_anim_control.setAnimation("NewIdle");
 		playerControl = false;
 		gameOverPanel.SetActive(true);
         clip2.Stop();
