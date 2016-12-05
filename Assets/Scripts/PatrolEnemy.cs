@@ -7,7 +7,7 @@ public class PatrolEnemy : MonoBehaviour {
 	public float speed = 1f;
 	public float startingPos;
 	public float endingPos;
-    private int health = 10;
+    private int health = 7;
     private float distance;
 	private Vector2 walking;
 	public BoxCollider2D player;

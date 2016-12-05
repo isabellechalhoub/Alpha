@@ -7,7 +7,7 @@ public class FallingPlatform : MonoBehaviour {
 
     public float fallDelay;
 
-    private BoxCollider2D player;
+    public BoxCollider2D player;
 
     void Start()
     {
@@ -17,8 +17,9 @@ public class FallingPlatform : MonoBehaviour {
 
     void Update()
     {
-        if (player.IsTouching(gameObject.GetComponent<BoxCollider2D>()))
+        if (player.IsTouching(this.GetComponent<BoxCollider2D>()))
         {
+            Debug.Log("here");
             StartCoroutine(Fall());
         }
     }

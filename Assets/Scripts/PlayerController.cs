@@ -370,55 +370,50 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "KillZ")
-        {
+        if (col.tag == "KillZ") {
             PlayerFallDeath();
             clip2.Stop();
             clip3.Play();
         }
         else if (col.tag == "Damaging")
-			PlayerDamage (1);
-		else if (col.tag == "YouWin") 
+            PlayerDamage(1);
+        else if (col.tag == "YouWin")
             Winning();
-		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
-		else if(col.tag == "Enemy")
-			PlayerDamage (1);
+        else if (col.tag == "Enemy" && (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C))) { }
+        else if (col.tag == "Enemy")
+            PlayerDamage(1);
+
+        else if (col.tag == "FallingPlatform") {
+            StartCoroutine(fallingPlat(col));
+        }
 
         #region Collectables
-        else if (col.tag.Equals("Collectable"))
-        {
-            if(col.name.Equals("Journal"))
-            {
+        else if (col.tag.Equals("Collectable")) {
+            if (col.name.Equals("Journal")) {
                 journal.SetActive(false);
                 journalUI.SetActive(true);
             }
-            else if (col.name.Equals("Jar"))
-            {
+            else if (col.name.Equals("Jar")) {
                 jar.SetActive(false);
                 jarUI.SetActive(true);
             }
-            else if (col.name.Equals("Lunchbox"))
-            {
+            else if (col.name.Equals("Lunchbox")) {
                 lunchbox.SetActive(false);
                 lunchboxUI.SetActive(true);
             }
-            else if (col.name.Equals("Photo"))
-            {
+            else if (col.name.Equals("Photo")) {
                 photo.SetActive(false);
                 photoUI.SetActive(true);
             }
-            else if (col.name.Equals("Plushie"))
-            {
+            else if (col.name.Equals("Plushie")) {
                 plushie.SetActive(false);
                 plushieUI.SetActive(true);
             }
-            else if (col.name.Equals("GameBoy"))
-            {
+            else if (col.name.Equals("GameBoy")) {
                 gameboy.SetActive(false);
                 gameboyUI.SetActive(true);
             }
-            else if (col.name.Equals("Shell"))
-            {
+            else if (col.name.Equals("Shell")) {
                 shell.SetActive(false);
                 shellUI.SetActive(true);
             }
@@ -487,6 +482,14 @@ public class PlayerController : MonoBehaviour
             this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    IEnumerator fallingPlat(Collider2D col) 
+    {
+        Rigidbody2D rb2d = col.gameObject.GetComponentInParent<Rigidbody2D>();
+        yield return new WaitForSeconds(1.0f);
+        rb2d.isKinematic = false;
+        yield return 0;
     }
 #endregion
 }
