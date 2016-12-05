@@ -7,14 +7,14 @@ public class PatrolEnemy : MonoBehaviour {
 	public float speed = 1f;
 	public float startingPos;
 	public float endingPos;
-    private int health = 3;
+    private int health = 10;
     private float distance;
 	private Vector2 walking;
 	public BoxCollider2D player;
 	public PolygonCollider2D shield;
     public BoxCollider2D enemy;
     public GameObject me;
-    public PolygonCollider2D sword;
+    public BoxCollider2D sword;
 
     void Start () 
 	{
@@ -25,7 +25,7 @@ public class PatrolEnemy : MonoBehaviour {
         shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<PolygonCollider2D>();
+        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }
 
 	// Update is called once per frame
@@ -38,11 +38,28 @@ public class PatrolEnemy : MonoBehaviour {
 
         if (transform.position.x > startingPos || transform.position.x < endingPos || enemy.IsTouching(player) || enemy.IsTouching(sword) || enemy.IsTouching(shield))
         {
-            if (enemy.IsTouching(sword))
-                health--;
+            if (enemy.IsTouching(sword)) 
+                {
+                StartCoroutine(hit());
+                StartCoroutine(Flash());
+            }
             this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		}
         walking.x = -1 * speed * Time.deltaTime;
         transform.Translate (walking);
 	}
+
+    IEnumerator hit() 
+    {
+        health--;
+        yield return new WaitForSeconds(1.0f);
+    }
+    IEnumerator Flash() {
+        for (int i = 0; i < 2; i++) {
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(0.5f);
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 }

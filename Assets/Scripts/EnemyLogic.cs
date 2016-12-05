@@ -11,7 +11,7 @@ public class EnemyLogic : MonoBehaviour {
     public PolygonCollider2D shield;
     public BoxCollider2D enemy;
     public GameObject me;
-    public PolygonCollider2D sword;
+    public BoxCollider2D sword;
     public float range;
     public LayerMask playerLayer;
     Vector3 movePos;
@@ -23,7 +23,7 @@ public class EnemyLogic : MonoBehaviour {
         shield = GameObject.FindGameObjectWithTag("Shield").GetComponent<PolygonCollider2D>();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<PolygonCollider2D>();
+        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }
 	
 	// Update is called once per frame
@@ -43,6 +43,7 @@ public class EnemyLogic : MonoBehaviour {
         }
         if (enemy.IsTouching(sword))
         {
+            Debug.Log("here");
             health--;
         }
     }

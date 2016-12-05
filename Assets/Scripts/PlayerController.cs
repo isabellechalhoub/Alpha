@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     #region Vars
     private Animator animator;
     public float slashSpeed;
-    private Rigidbody2D swordrb;
+    //private Rigidbody2D swordrb;
 	public GameObject gameCamera;
 	public GameObject healthBar;
 	public GameObject gameOverPanel;
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         shield = GameObject.FindGameObjectWithTag("Shield");
         sword = GameObject.FindGameObjectWithTag("Sword");
-        swordrb = sword.GetComponent<Rigidbody2D>();
+        //swordrb = sword.GetComponent<Rigidbody2D>();
 		coll = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D> ();
 		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
 		_controller = gameObject.GetComponent<CharacterController2D>();
@@ -92,6 +92,9 @@ public class PlayerController : MonoBehaviour
         plushieUI.SetActive(false);
         gameboyUI.SetActive(false);
         shellUI.SetActive(false);
+
+        sword.SetActive(false);
+        shield.SetActive(false);
 
         gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
 		winPanel.SetActive(false);
@@ -270,8 +273,15 @@ public class PlayerController : MonoBehaviour
         //	shieldin = true;
         //} else
         //	shieldin = false;
-
-        if (Input.GetKeyDown(KeyCode.X) && !swinging)
+        if (Input.GetKey(KeyCode.X) && !swinging) {
+            shieldin = true;
+            shield.SetActive(true);
+        }
+        else {
+            shieldin = false;
+            shield.SetActive(false);
+        }
+            if (Input.GetKeyDown(KeyCode.X) && !swinging)
         {
             animator.SetBool("isBlocking", true);
             //_anim_control.setAnimation("NewPreblock");
@@ -285,20 +295,21 @@ public class PlayerController : MonoBehaviour
             shieldin = false;
             shield.SetActive(false);
         }
-        else
-        {
-            shieldin = false;
-            shield.SetActive(false);
-        }
         #endregion
 
         #region sword swing
         // swing dat sword bb
+        if (Input.GetKey(KeyCode.C) && !shieldin) {
+            swinging = true;
+            //sword.SetActive(true);
+            sword.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.C) && !shieldin)
         {
             animator.SetTrigger("isSlashing");
             //_anim_control.setAnimation("NewSlash");
             swinging = true;
+            //sword.SetActive(true);
             sword.SetActive(true);
 
             //Transform pos = sword.GetComponent<Transform>();
@@ -306,10 +317,9 @@ public class PlayerController : MonoBehaviour
             //Vector3 axis = new Vector3(pos.localPosition.x, pos.localPosition.y - pos.localPosition.sqrMagnitude, 0);
             //pos.RotateAround(axis, axis, 20 * Time.deltaTime);
         }
-        else
-        {
+        if (Input.GetKeyUp(KeyCode.C)) {
+            sword.SetActive(false);
             swinging = false;
-            //sword.SetActive(false);
         }
         #endregion
 
@@ -428,7 +438,8 @@ public class PlayerController : MonoBehaviour
 	private void PlayerDamage(int damage)
 	{
 		currHealth -= damage;
-		float normHealth = (float)currHealth/(float)health;
+
+        StartCoroutine(Flash());
 
         if (currHealth == 4)
         {
@@ -466,5 +477,16 @@ public class PlayerController : MonoBehaviour
         clip2.Stop();
         clip3.Play();
 	}
+
+    IEnumerator Flash() 
+    {
+        for (int i = 0; i < 2; i++) 
+            {
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(0.5f);
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 #endregion
 }
