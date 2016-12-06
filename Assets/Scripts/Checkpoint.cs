@@ -25,7 +25,10 @@ public class Checkpoint : MonoBehaviour {
 
 	void Start()
 	{
-		spawn = new Vector3(-1542f,-1908.7f, 0);
+		if (PlayerPrefs.GetInt("Level") == 1)
+			spawn = new Vector3(-1542f,-1908.7f, 0);
+		else if (PlayerPrefs.GetInt("Level") == 2)
+			spawn = new Vector3(-952f,-3325f, 0);
 	}
     
 	public void UpdateSpawn(Vector3 tr)

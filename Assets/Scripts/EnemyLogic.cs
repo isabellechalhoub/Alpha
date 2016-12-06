@@ -19,11 +19,11 @@ public class EnemyLogic : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
-        shield = GameObject.FindGameObjectWithTag("Shield").GetComponent<PolygonCollider2D>();
+        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
+        //shield = GameObject.FindGameObjectWithTag("Shield").GetComponent<PolygonCollider2D>();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
+        //sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }
 	
 	// Update is called once per frame

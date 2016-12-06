@@ -21,11 +21,11 @@ public class PatrolEnemy : MonoBehaviour {
         distance = startingPos - endingPos;
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
-        player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
-        shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
+        //player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
+        //shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
+        //sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }
 
 	// Update is called once per frame
