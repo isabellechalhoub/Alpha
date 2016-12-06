@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: be1c4c782a144fa41876c74ff07d4875
+timeCreated: 1480955628
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: floor_face2
+    21300002: floor_face
+    21300004: floor_edge_D
+    21300006: floor_bits_3
+    21300008: floor_edge
+    21300010: pipe1
+    21300012: tile
+    21300014: between_wood
+    21300016: train_wood
+    21300018: pipe2
+    21300020: D_pipe1
+    21300022: pipe3
+    21300024: concreteTUP
+    21300026: concreteTDOWN
+    21300028: D_pipe2
+    21300030: edge_grate
+    21300032: nubs
+    21300034: D_pipe3
+    21300036: warning_tile
+    21300038: wood_face
+    21300040: concret_face
+    21300042: concrete_face_S
+    21300044: cut_off_side_wood
+    21300046: lite_tile
+    21300048: floor_bar_lit_half
+    21300050: floor_bar_dark_half
+    21300052: pipe_edge1
+    21300054: pipe_edge2
+    21300056: pipe_edge4
+    21300058: lite_pipe_edge1
+    21300060: lit_pipe_edge2
+    21300062: lit_pipe_edge3
+    21300064: lite_tile_vert
+    21300066: lite_tile_horiz
+    21300068: lite_tile_s
+    21300070: tile_s
+    21300072: tile_horiz
+    21300074: tile_vert
+    21300076: rail
+    21300078: rail_bolt
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: floor_face2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 199
+        width: 180
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_face
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 229
+        width: 180
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_edge_D
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 298
+        width: 180
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_bits_3
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 10
+        width: 180
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_edge
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 238
+        width: 180
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 210
+        width: 180
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 133
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: between_wood
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 129
+        width: 13
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: train_wood
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 131
+        width: 35
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe2
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 182
+        width: 180
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: D_pipe1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 143
+        width: 180
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 161
+        width: 180
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: concreteTUP
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 65
+        width: 81
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: concreteTDOWN
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 66
+        width: 81
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: D_pipe2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 116
+        width: 180
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: edge_grate
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 41
+        width: 180
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nubs
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 110
+        width: 82
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: D_pipe3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 81
+        width: 180
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: warning_tile
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 13
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wood_face
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 9
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: concret_face
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 14
+        width: 180
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: concrete_face_S
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 9
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cut_off_side_wood
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 34
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lite_tile
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 240
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_bar_lit_half
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 238
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: floor_bar_dark_half
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 298
+        width: 90
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe_edge1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 54
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe_edge2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 57
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pipe_edge4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 58
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lite_pipe_edge1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 140
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lit_pipe_edge2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 144
+        width: 21
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lit_pipe_edge3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 144
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lite_tile_vert
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 240
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lite_tile_horiz
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 240
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lite_tile_s
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 189
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_s
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 189
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_horiz
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 189
+        width: 90
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_vert
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 240
+        width: 45
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rail
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 22
+        width: 180
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rail_bolt
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 25
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

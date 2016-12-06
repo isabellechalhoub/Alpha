@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         windy = false;
         topwind = false;
 
-		this.transform.position = Checkpoint.instance.spawn;
+		//this.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
