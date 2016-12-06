@@ -36,10 +36,6 @@ public class PlayerController : MonoBehaviour
     private bool swinging = false;
     private bool pause = false;
     private bool wind;
-    public GameObject deathMusic;
-    private AudioSource clip3;
-    private AudioSource clip2;
-    public GameObject levelMusic;
 
     private GameObject journal;
     private GameObject jar;
@@ -104,12 +100,6 @@ public class PlayerController : MonoBehaviour
         _anim_control.setAnimation("NewFall");
         windy = false;
         topwind = false;
-
-        clip3 = deathMusic.GetComponent<AudioSource>();
-        clip3.Stop();
-        clip3.time = 5.0f;
-        clip2 = levelMusic.GetComponent<AudioSource>();
-        clip2.Play();
     }
 
 	void Update ()
@@ -372,8 +362,6 @@ public class PlayerController : MonoBehaviour
 	{
         if (col.tag == "KillZ") {
             PlayerFallDeath();
-            clip2.Stop();
-            clip3.Play();
         }
         else if (col.tag == "Damaging")
             PlayerDamage(1);
@@ -458,8 +446,7 @@ public class PlayerController : MonoBehaviour
         //_anim_control.setAnimation("NewIdle");
 		playerControl = false;
 		gameOverPanel.SetActive(true);
-        clip2.Stop();
-        clip3.Play();
+		SoundManager.instance.PlayDeathMusic();
 	}
 
 	// Stops the camera follow and reduces health
@@ -469,8 +456,7 @@ public class PlayerController : MonoBehaviour
         //playerControl = false;
 		gameCamera.GetComponent<CameraFollow2D>().stopCameraFollow();
 		gameOverPanel.SetActive(true);
-        clip2.Stop();
-        clip3.Play();
+		SoundManager.instance.PlayDeathMusic();
 	}
 
     IEnumerator Flash() 

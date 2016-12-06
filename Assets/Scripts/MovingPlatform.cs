@@ -9,16 +9,16 @@ public class MovingPlatform : MonoBehaviour
 	private float timer = 0;
 	private Vector3 startPosition = Vector3.zero;
 	private bool outgoing = true;
-    private GameObject player;
-    private PlayerController controller;
+    //private GameObject player;
+    //private PlayerController controller;
 
 	// Use this for initialization
 	void Start () 
 	{
 		startPosition = this.gameObject.transform.position;
 		endPosition += startPosition;
-        player = GameObject.FindGameObjectWithTag("Player");
-        controller = player.GetComponent<PlayerController>();
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //controller = player.GetComponent<PlayerController>();
 		float distance = Vector3.Distance(startPosition, endPosition);
 		if (distance != 0)
 		{

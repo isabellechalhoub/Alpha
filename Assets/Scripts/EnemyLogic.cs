@@ -43,7 +43,6 @@ public class EnemyLogic : MonoBehaviour {
         }
         if (enemy.IsTouching(sword))
         {
-            Debug.Log("here");
             health--;
         }
     }
