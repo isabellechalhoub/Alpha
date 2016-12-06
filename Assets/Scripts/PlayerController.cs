@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
     private GameObject gameboyUI;
     private GameObject shellUI;
 
+	public AudioClip windSound;
+	public AudioClip umbrellaOpenSound;
+	public AudioClip umbrellaSwipeSoud;
+	public AudioClip umbrellaHitSound;
+
     #endregion
 
     void Start ()
@@ -89,6 +94,9 @@ public class PlayerController : MonoBehaviour
         gameboyUI.SetActive(false);
         shellUI.SetActive(false);
 
+		GameObject.Find("CollecUI").SetActive(true);
+		GameObject.Find("HealthUI").SetActive(true);
+
         sword.SetActive(false);
         shield.SetActive(false);
 
@@ -100,6 +108,8 @@ public class PlayerController : MonoBehaviour
         _anim_control.setAnimation("NewFall");
         windy = false;
         topwind = false;
+
+		this.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -123,9 +133,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 1;
-                pausePanel.SetActive(false);
-                playerControl = true;
+				UnPause();
+                //Time.timeScale = 1;
+                //pausePanel.SetActive(false);
+                //playerControl = true;
             }
         }
 	}
@@ -221,12 +232,15 @@ public class PlayerController : MonoBehaviour
 		{
             if (!floatin) 
             {
+				SoundManager.instance.PlaySingle(umbrellaOpenSound);
                 animator.SetBool("isFloating", true);
                 //_anim_control.setAnimation("NewDeploy");
             }
             if (topwind) { }
             else if (!windy)
+			{
                 velocity.y = -2;
+			}
 			floatin = true;
 		}
 		if (_controller.isGrounded || Input.GetKeyUp (KeyCode.Space))
@@ -271,9 +285,10 @@ public class PlayerController : MonoBehaviour
             shieldin = false;
             shield.SetActive(false);
         }
-            if (Input.GetKeyDown(KeyCode.X) && !swinging)
+        if (Input.GetKeyDown(KeyCode.X) && !swinging)
         {
             animator.SetBool("isBlocking", true);
+			SoundManager.instance.PlaySingle(umbrellaOpenSound);
             //_anim_control.setAnimation("NewPreblock");
             shieldin = true;
             shield.SetActive(true);
@@ -296,6 +311,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C) && !shieldin)
         {
+			SoundManager.instance.PlaySingle(umbrellaSwipeSoud);
             animator.SetTrigger("isSlashing");
             //_anim_control.setAnimation("NewSlash");
             swinging = true;
@@ -345,6 +361,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.tag.Equals("Wind") && floatin)
         {
+			SoundManager.instance.PlaySingle(windSound);
             gravity = 35;
             windy = true;
         }
@@ -360,20 +377,22 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-        if (col.tag == "KillZ") {
-            PlayerFallDeath();
-        }
-        else if (col.tag == "Damaging")
-            PlayerDamage(1);
-        else if (col.tag == "YouWin")
-            Winning();
-        else if (col.tag == "Enemy" && (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C))) { }
-        else if (col.tag == "Enemy")
-            PlayerDamage(1);
-
-        else if (col.tag == "FallingPlatform") {
-            StartCoroutine(fallingPlat(col));
-        }
+		if (col.tag == "KillZ") {
+			PlayerFallDeath ();
+		} else if (col.tag == "Damaging")
+			PlayerDamage (1);
+		else if (col.tag == "YouWin")
+			Winning ();
+		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.C))) {
+		} else if (col.tag == "Enemy")
+			PlayerDamage (1);
+		else if (col.tag == "FallingPlatform") {
+			StartCoroutine (fallingPlat (col));
+		} 
+		else if (col.tag.Equals ("Checkpoint")) 
+		{
+			Checkpoint.instance.UpdateSpawn(col.transform.position);
+		}
 
         #region Collectables
         else if (col.tag.Equals("Collectable")) {
@@ -447,6 +466,7 @@ public class PlayerController : MonoBehaviour
 		playerControl = false;
 		gameOverPanel.SetActive(true);
 		SoundManager.instance.PlayDeathMusic();
+		RemoveUI();
 	}
 
 	// Stops the camera follow and reduces health
@@ -456,6 +476,7 @@ public class PlayerController : MonoBehaviour
         //playerControl = false;
 		gameCamera.GetComponent<CameraFollow2D>().stopCameraFollow();
 		gameOverPanel.SetActive(true);
+		RemoveUI();
 		SoundManager.instance.PlayDeathMusic();
 	}
 
@@ -477,5 +498,27 @@ public class PlayerController : MonoBehaviour
         rb2d.isKinematic = false;
         yield return 0;
     }
+
+	public void UnPause()
+	{
+		Time.timeScale = 1;
+		pausePanel.SetActive(false);
+		playerControl = true;
+	}
+	void RemoveUI()
+	{
+		GameObject.Find("Heart3").SetActive(false);
+		GameObject.Find("Heart2").SetActive(false);
+		GameObject.Find("Heart1").SetActive(false);
+		journalUI.SetActive(false);
+		jarUI.SetActive(false);
+		lunchboxUI.SetActive(false);
+		photoUI.SetActive(false);
+		plushieUI.SetActive(false);
+		gameboyUI.SetActive(false);
+		shellUI.SetActive(false);
+		GameObject.Find("CollecUI").SetActive(false);
+		GameObject.Find("HealthUI").SetActive(false);
+	}
 #endregion
 }

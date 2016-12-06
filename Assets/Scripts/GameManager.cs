@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
+	private bool check;
 
     // Use this for initialization
     void Start () 
