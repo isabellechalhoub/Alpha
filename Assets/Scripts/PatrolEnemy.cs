@@ -21,11 +21,11 @@ public class PatrolEnemy : MonoBehaviour {
         distance = startingPos - endingPos;
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
-        //player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
-        //shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
+        player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
+        shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        //sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
+        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }
 
 	// Update is called once per frame
@@ -36,14 +36,15 @@ public class PatrolEnemy : MonoBehaviour {
             me.SetActive(false);
         }
 
-        if (transform.position.x > startingPos || transform.position.x < endingPos || enemy.IsTouching(player) || enemy.IsTouching(sword) || enemy.IsTouching(shield))
+        if (transform.position.x > startingPos || transform.position.x < endingPos || enemy.IsTouching(sword) || enemy.IsTouching(shield))
         {
             if (enemy.IsTouching(sword)) 
-                {
+            {
                 StartCoroutine(hit());
                 StartCoroutine(Flash());
             }
-            this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            else
+                this.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		}
         walking.x = -1 * speed * Time.deltaTime;
         transform.Translate (walking);

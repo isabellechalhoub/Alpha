@@ -31,7 +31,6 @@ public class Checkpoint : MonoBehaviour {
 			spawn = new Vector3 (-952f, -3325f, 0);
 		else if (PlayerPrefs.GetInt ("Level") == 3) {
 			spawn = new Vector3 (-1594f, -1897.4f, 0);
-			Debug.Log (spawn);
 		}
 	}
 	public void UpdateSpawn(Vector3 tr)

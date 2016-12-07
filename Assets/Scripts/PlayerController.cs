@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
     #region Vars
+    public ThoughtBubble thought;
     private Animator animator;
     public float slashSpeed;
     //private Rigidbody2D swordrb;
@@ -56,6 +57,8 @@ public class PlayerController : MonoBehaviour
 	public AudioClip umbrellaOpenSound;
 	public AudioClip umbrellaSwipeSoud;
 	public AudioClip umbrellaHitSound;
+
+    public GameManager gm;
 
     #endregion
 
@@ -109,7 +112,9 @@ public class PlayerController : MonoBehaviour
         windy = false;
         topwind = false;
 
-		//this.transform.position = Checkpoint.instance.spawn;
+        //thought.ChangeBubble("Level 1");
+
+		gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -413,10 +418,12 @@ public class PlayerController : MonoBehaviour
                 photoUI.SetActive(true);
             }
             else if (col.name.Equals("Plushie")) {
+                thought.ChangeBubble("Banjo");
                 plushie.SetActive(false);
                 plushieUI.SetActive(true);
             }
             else if (col.name.Equals("GameBoy")) {
+                thought.ChangeBubble("Banjo");
                 gameboy.SetActive(false);
                 gameboyUI.SetActive(true);
             }
@@ -433,7 +440,8 @@ public class PlayerController : MonoBehaviour
 		playerControl = false;
         animator.SetBool("isIdle", true);
         //_anim_control.setAnimation("Idle");
-		winPanel.SetActive(true);
+        //winPanel.SetActive(true);
+        gm.NextLevel();
 	}
 
 	// Changes player health when damage is taken. checks for death

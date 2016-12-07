@@ -40,7 +40,15 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-		PlayerPrefs.SetInt ("Level", 2);
-        SceneManager.LoadScene(2);
+        if (SceneManager.GetActiveScene().name.Equals("L1"))
+        {
+            PlayerPrefs.SetInt("Level", 2);
+            SceneManager.LoadScene(2);
+        }
+		else if (SceneManager.GetActiveScene().name.Equals("L2"))
+        {
+            PlayerPrefs.SetInt("Level", 3);
+            SceneManager.LoadScene(3);
+        }
     }
 }
