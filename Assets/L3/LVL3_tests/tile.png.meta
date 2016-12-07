@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1be5b9f998bbd6b48be7059516a00d89
-timeCreated: 1480893746
+timeCreated: 1481128527
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -26,6 +26,7 @@ TextureImporter:
     21300038: 4x18
     21300040: 8x16
     21300042: 18x6
+    21300044: tile_2x6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -355,6 +356,19 @@ TextureImporter:
         y: 0
         width: 180
         height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_2x6
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 960
+        width: 179
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 907a24cefe5b6c74e909e5ec64d99699
-timeCreated: 1480896106
+timeCreated: 1481127682
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -28,6 +28,14 @@ TextureImporter:
     21300042: tile_fade_3
     21300044: tile_fade_4
     21300046: 6x18_ceiling
+    21300048: ceiling_edge_bit1
+    21300050: ceiling_edge_bit3
+    21300052: ceiling_edge_bit5
+    21300054: ceiling_edge_bit4
+    21300056: ceiling_edge_bit2
+    21300058: ceiling_edge_bit6
+    21300060: ceiling_edge_bit7
+    21300062: ceiling_edge_bit8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -383,6 +391,110 @@ TextureImporter:
         y: 300
         width: 540
         height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit1
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 300
+        width: 90
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit3
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 360
+        width: 60
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit5
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 300
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit4
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 360
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit2
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 540
+        width: 30
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit6
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 360
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit7
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 420
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_edge_bit8
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 540
+        width: 30
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
