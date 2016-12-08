@@ -83,7 +83,16 @@ public class SoundManager : MonoBehaviour
 			}
 			//Cursor.visible = false;
 		}
-		instance.musicSource.Play ();
+        else if (SceneManager.GetActiveScene().name == "L3")
+        {
+            if (instance.musicSource.clip != L3Song)
+            {
+                instance.musicSource.clip = L3Song;
+                instance.musicSource.Play();
+            }
+            //Cursor.visible = false;
+        }
+        instance.musicSource.Play ();
 	}
 
 	public void PlayDeathMusic()

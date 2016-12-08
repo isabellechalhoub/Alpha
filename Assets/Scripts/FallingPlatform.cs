@@ -19,7 +19,7 @@ public class FallingPlatform : MonoBehaviour {
     {
         if (player.IsTouching(this.GetComponent<BoxCollider2D>()))
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             StartCoroutine(Fall());
         }
     }

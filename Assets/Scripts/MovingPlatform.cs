@@ -52,6 +52,12 @@ public class MovingPlatform : MonoBehaviour
 		
 	}
 
+    public void ChangeEnd()
+    {
+        endPosition.x = 269f;
+        speed = 15;
+    }
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;

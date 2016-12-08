@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
     #region Vars
+    public MovingPlatform mv;
+    public GameObject gateFront;
+    public GameObject gateBack;
     public ThoughtBubble thought;
     private Animator animator;
 	public GameObject gameCamera;
@@ -101,7 +104,9 @@ public class PlayerController : MonoBehaviour
 
 		setUpUI ();
 
-		//gameObject.transform.position = Checkpoint.instance.spawn;
+        int level = PlayerPrefs.GetInt("Level");
+        if (level == 1)
+            gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -353,7 +358,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.tag.Equals("Wind") && floatin)
         {
-			SoundManager.instance.PlaySingle(windSound);
+			//SoundManager.instance.PlaySingle(windSound);
             gravity = 35;
             windy = true;
         }
@@ -395,6 +400,10 @@ public class PlayerController : MonoBehaviour
 		}  else if (col.tag.Equals ("JarBubble")) {
 			thought.ChangeBubble("Jar");
 		}
+        else if (col.tag.Equals("Switch"))
+        {
+            OpenGate();
+        }
 
         #region Collectables
         else if (col.tag.Equals("Collectable")) {
@@ -504,7 +513,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator fallingPlat(Collider2D col) 
     {
         Rigidbody2D rb2d = col.gameObject.GetComponentInParent<Rigidbody2D>();
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         rb2d.isKinematic = false;
         yield return 0;
     }
@@ -566,5 +575,12 @@ public class PlayerController : MonoBehaviour
 		else
 			shellUI.SetActive (false);
 	}
+
+    void OpenGate()
+    {
+        gateFront.transform.rotation = new Quaternion(0f, 90f, 0f,gateBack.transform.rotation.w);
+        gateBack.transform.rotation = new Quaternion(0f, 90f, 0f, gateBack.transform.rotation.w);
+        mv.ChangeEnd();
+    }
 #endregion
 }
