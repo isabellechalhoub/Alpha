@@ -16,7 +16,6 @@ public class PatrolEnemy : MonoBehaviour {
     public BoxCollider2D sword;
 	public float xForce;
 	public float yForce;
-	Vector2 pushForce;
 
     void Start () 
 	{
@@ -24,7 +23,6 @@ public class PatrolEnemy : MonoBehaviour {
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
 		enemy = gameObject.GetComponent<BoxCollider2D>();
-		pushForce = new Vector2 (xForce, yForce);
     }
 
 	// Update is called once per frame

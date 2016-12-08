@@ -5,8 +5,7 @@ public class EnemyLogic : MonoBehaviour {
 
     public bool inSight = false;
     public bool inRange = false;
-    public float speed = 1f;
-    private int health = 3;
+    public int health;
     private Vector2 walking;
     public BoxCollider2D player;
     public PolygonCollider2D shield;

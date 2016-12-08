@@ -388,6 +388,12 @@ public class PlayerController : MonoBehaviour
 			thought.ChangeBubble("Patrol");
 		} else if (col.tag.Equals ("BanjoBubble")) {
 			thought.ChangeBubble("Banjo");
+		} else if (col.tag.Equals ("GopherBubble")) {
+			thought.ChangeBubble("Gopher");
+		} else if (col.tag.Equals ("LunchboxBubble")) {
+			thought.ChangeBubble("Lunchbox");
+		}  else if (col.tag.Equals ("JarBubble")) {
+			thought.ChangeBubble("Jar");
 		}
 
         #region Collectables

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: be1c4c782a144fa41876c74ff07d4875
-timeCreated: 1480955628
+timeCreated: 1481174444
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -44,6 +44,16 @@ TextureImporter:
     21300074: tile_vert
     21300076: rail
     21300078: rail_bolt
+    21300080: against_wall_floor_panel
+    21300082: against_walllit_floor_panel
+    21300084: against_wall_dark_bar
+    21300086: against_wall_bright_bar
+    21300088: against_wall_grate
+    21300090: against_wall_pipe_large
+    21300092: against_wall_pipe_med1
+    21300094: against_wall_pipe_med2
+    21300096: against_wall_warning_tile
+    21300098: against_wall_nubs
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -607,6 +617,136 @@ TextureImporter:
         y: 25
         width: 19
         height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_floor_panel
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 199
+        width: 135
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_walllit_floor_panel
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 229
+        width: 135
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_dark_bar
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 298
+        width: 135
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_bright_bar
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 238
+        width: 135
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_grate
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 41
+        width: 135
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_pipe_large
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 143
+        width: 135
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_pipe_med1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 116
+        width: 135
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_pipe_med2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 81
+        width: 135
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_warning_tile
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 13
+        width: 45
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: against_wall_nubs
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 110
+        width: 39
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

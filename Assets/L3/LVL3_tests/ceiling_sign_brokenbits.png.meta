@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 08009aa73243b844d8644d1ee42499e7
-timeCreated: 1481128960
+timeCreated: 1481162084
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,6 +61,8 @@ TextureImporter:
     21300108: tile_lite_broken_horiz
     21300110: ceiling_sign_brokenbits_32
     21300112: tile_broken_S
+    21300114: ceiling_tile_half
+    21300116: dark_tile_half
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -845,6 +847,32 @@ TextureImporter:
         y: 216
         width: 45
         height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ceiling_tile_half
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 613
+        width: 90
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dark_tile_half
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 15
+        width: 30
+        height: 510
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
