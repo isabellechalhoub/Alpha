@@ -10,21 +10,16 @@ public class FallingTrain : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        //fall = true;
+		gameObject.GetComponent<Rigidbody2D> ().isKinematic = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //if (fall)
-            //transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        //if (coll.gameObject.tag.Equals("Platform"))
-        //{
-        //    fall = false;
-        //}
-    }
+	public void SetKinematic(bool kin)
+	{
+		gameObject.GetComponent<Rigidbody2D> ().isKinematic = kin;
+	}
 }

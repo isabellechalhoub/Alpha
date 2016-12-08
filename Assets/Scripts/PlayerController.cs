@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     #region Vars
     public ThoughtBubble thought;
     private Animator animator;
-    public float slashSpeed;
-    //private Rigidbody2D swordrb;
 	public GameObject gameCamera;
 	public GameObject healthBar;
 	public GameObject gameOverPanel;
@@ -20,7 +18,6 @@ public class PlayerController : MonoBehaviour
 	public float jumpHeight = 2;
 	public int health = 100;
 	public BoxCollider2D coll;
-	public BoxCollider2D enemy;
 	public GameObject healthNum;
     public GameObject shield;
     public GameObject sword;
@@ -66,9 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         shield = GameObject.FindGameObjectWithTag("Shield");
         sword = GameObject.FindGameObjectWithTag("Sword");
-        //swordrb = sword.GetComponent<Rigidbody2D>();
 		coll = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D> ();
-		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
 		_controller = gameObject.GetComponent<CharacterController2D>();
 		_anim_control = gameObject.GetComponent<AnimationController2D>();
         animator = gameObject.GetComponent<Animator>();
@@ -89,14 +84,6 @@ public class PlayerController : MonoBehaviour
         gameboyUI = GameObject.Find("GBUI");
         shellUI = GameObject.Find("ShellUI");
 
-        journalUI.SetActive(false);
-        jarUI.SetActive(false);
-        lunchboxUI.SetActive(false);
-        photoUI.SetActive(false);
-        plushieUI.SetActive(false);
-        gameboyUI.SetActive(false);
-        shellUI.SetActive(false);
-
 		GameObject.Find("CollecUI").SetActive(true);
 		GameObject.Find("HealthUI").SetActive(true);
 
@@ -112,9 +99,9 @@ public class PlayerController : MonoBehaviour
         windy = false;
         topwind = false;
 
-        //thought.ChangeBubble("Level 1");
+		setUpUI ();
 
-		gameObject.transform.position = Checkpoint.instance.spawn;
+		//gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -393,10 +380,14 @@ public class PlayerController : MonoBehaviour
 			PlayerDamage (1);
 		else if (col.tag == "FallingPlatform") {
 			StartCoroutine (fallingPlat (col));
-		} 
-		else if (col.tag.Equals ("Checkpoint")) 
-		{
-			Checkpoint.instance.UpdateSpawn(col.transform.position);
+		} else if (col.tag.Equals ("Checkpoint")) {
+			Checkpoint.instance.UpdateSpawn (col.transform.position);
+		} else if (col.tag.Equals ("Lvl1Bubble")) {
+			thought.ChangeBubble("Level 1");
+		} else if (col.tag.Equals ("PatrolBubble")) {
+			thought.ChangeBubble("Patrol");
+		} else if (col.tag.Equals ("BanjoBubble")) {
+			thought.ChangeBubble("Banjo");
 		}
 
         #region Collectables
@@ -404,32 +395,37 @@ public class PlayerController : MonoBehaviour
             if (col.name.Equals("Journal")) {
                 journal.SetActive(false);
                 journalUI.SetActive(true);
+				PlayerPrefs.SetInt("Journal", 1);
             }
             else if (col.name.Equals("Jar")) {
                 jar.SetActive(false);
                 jarUI.SetActive(true);
+				PlayerPrefs.SetInt("Jar", 1);
             }
             else if (col.name.Equals("Lunchbox")) {
                 lunchbox.SetActive(false);
                 lunchboxUI.SetActive(true);
+				PlayerPrefs.SetInt("Lunchbox", 1);
             }
             else if (col.name.Equals("Photo")) {
                 photo.SetActive(false);
                 photoUI.SetActive(true);
+				PlayerPrefs.SetInt("Photo", 1);
             }
             else if (col.name.Equals("Plushie")) {
-                thought.ChangeBubble("Banjo");
                 plushie.SetActive(false);
                 plushieUI.SetActive(true);
+				PlayerPrefs.SetInt("Plushie", 1);
             }
             else if (col.name.Equals("GameBoy")) {
-                thought.ChangeBubble("Banjo");
                 gameboy.SetActive(false);
                 gameboyUI.SetActive(true);
+				PlayerPrefs.SetInt("Gameboy", 1);
             }
             else if (col.name.Equals("Shell")) {
                 shell.SetActive(false);
                 shellUI.SetActive(true);
+				PlayerPrefs.SetInt("Shell", 1);
             }
             #endregion
         }
@@ -439,8 +435,6 @@ public class PlayerController : MonoBehaviour
 	{
 		playerControl = false;
         animator.SetBool("isIdle", true);
-        //_anim_control.setAnimation("Idle");
-        //winPanel.SetActive(true);
         gm.NextLevel();
 	}
 
@@ -454,14 +448,17 @@ public class PlayerController : MonoBehaviour
         if (currHealth == 4)
         {
             GameObject.Find("Heart3").SetActive(false);
+			PlayerPrefs.SetInt ("Heart3", 0);
         }
         if (currHealth == 2)
         {
             GameObject.Find("Heart2").SetActive(false);
+			PlayerPrefs.SetInt ("Heart2", 0);
         }
         if (currHealth <= 0)
         {
             GameObject.Find("Heart1").SetActive(false);
+			PlayerPrefs.SetInt ("Heart1", 0);
             PlayerDeath();
         }
 	}
@@ -470,7 +467,6 @@ public class PlayerController : MonoBehaviour
 	private void PlayerDeath()
 	{
         animator.SetBool("isIdle", true);
-        //_anim_control.setAnimation("NewIdle");
 		playerControl = false;
 		gameOverPanel.SetActive(true);
 		SoundManager.instance.PlayDeathMusic();
@@ -481,7 +477,7 @@ public class PlayerController : MonoBehaviour
 	private void PlayerFallDeath()
 	{
 		currHealth = 0;
-        //playerControl = false;
+        playerControl = false;
 		gameCamera.GetComponent<CameraFollow2D>().stopCameraFollow();
 		gameOverPanel.SetActive(true);
 		RemoveUI();
@@ -493,9 +489,9 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < 2; i++) 
             {
             this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
 
@@ -515,18 +511,54 @@ public class PlayerController : MonoBehaviour
 	}
 	void RemoveUI()
 	{
-		GameObject.Find("Heart3").SetActive(false);
-		GameObject.Find("Heart2").SetActive(false);
-		GameObject.Find("Heart1").SetActive(false);
-		journalUI.SetActive(false);
-		jarUI.SetActive(false);
-		lunchboxUI.SetActive(false);
-		photoUI.SetActive(false);
-		plushieUI.SetActive(false);
-		gameboyUI.SetActive(false);
-		shellUI.SetActive(false);
-		GameObject.Find("CollecUI").SetActive(false);
-		GameObject.Find("HealthUI").SetActive(false);
+		try {
+			GameObject.Find("Heart3").SetActive(false);
+			GameObject.Find("Heart2").SetActive(false);
+			GameObject.Find("Heart1").SetActive(false);
+			journalUI.SetActive(false);
+			jarUI.SetActive(false);
+			lunchboxUI.SetActive(false);
+			photoUI.SetActive(false);
+			plushieUI.SetActive(false);
+			gameboyUI.SetActive(false);
+			shellUI.SetActive(false);
+			GameObject.Find("CollecUI").SetActive(false);
+			GameObject.Find("HealthUI").SetActive(false);
+		}
+		catch(System.Exception e) {
+		}
+	}
+
+	void setUpUI()
+	{
+		if (PlayerPrefs.GetInt ("Journal") == 1)
+			journalUI.SetActive (true);
+		else
+			journalUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Jar") == 1)
+			jarUI.SetActive (true);
+		else
+			jarUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Lunchbox") == 1)
+			lunchboxUI.SetActive (true);
+		else
+			lunchboxUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Photo") == 1)
+			photoUI.SetActive (true);
+		else
+			photoUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Plushie") == 1)
+			plushieUI.SetActive (true);
+		else
+			plushieUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Gameboy") == 1)
+			gameboyUI.SetActive (true);
+		else
+			gameboyUI.SetActive (false);
+		if (PlayerPrefs.GetInt ("Shell") == 1)
+			shellUI.SetActive (true);
+		else
+			shellUI.SetActive (false);
 	}
 #endregion
 }

@@ -11,7 +11,22 @@ public class GameManager : MonoBehaviour
     void Start () 
 	{
 		PlayerPrefs.SetInt ("Level", level);
+		resetUI ();
     }
+
+	void resetUI()
+	{
+		PlayerPrefs.SetInt ("Heart1", 1);
+		PlayerPrefs.SetInt ("Heart2", 1);
+		PlayerPrefs.SetInt ("Heart3", 1);
+		PlayerPrefs.SetInt ("Journal", 0);
+		PlayerPrefs.SetInt ("Lunchbox", 0);
+		PlayerPrefs.SetInt ("Jar", 0);
+		PlayerPrefs.SetInt ("Plushie", 0);
+		PlayerPrefs.SetInt ("Photo", 0);
+		PlayerPrefs.SetInt ("Gameboy", 0);
+		PlayerPrefs.SetInt ("Shell", 0);
+	}
 
 	// Event handling when Restart button clicked
 	public void RestartLevel()
@@ -22,12 +37,14 @@ public class GameManager : MonoBehaviour
 	// Event handling when Exit button clicked - go to main menu
 	public void ExitLevel()
 	{
+		resetUI ();
         SceneManager.LoadScene(0);
 	}
 
 	// Even handling for Exit game button on main menu
 	public void ExitGame()
 	{
+		resetUI ();
 		Application.Quit();
 	}
 

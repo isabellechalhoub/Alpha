@@ -8,17 +8,17 @@ public class FlyingEnemy : MonoBehaviour
     public float range;
     public LayerMask playerLayer;
     public bool inRange;
-    //public int health = 1;
-    //private BoxCollider2D foot;
-    //private BoxCollider2D head;
+	public int health;
+	private AnimationController2D _anim_control;
+	private BoxCollider2D enemy;
+	public BoxCollider2D sword;
 
 	// Use this for initialization
 	void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //foot = player.GetComponent<BoxCollider2D>();
-        //head = this.GetComponentInChildren<BoxCollider2D>();
-        //Debug.Log(head.gameObject.name);
+		_anim_control = gameObject.GetComponent<AnimationController2D> ();
+		enemy = gameObject.GetComponent<BoxCollider2D> ();
 	}
 	
 	// Update is called once per frame
@@ -26,21 +26,45 @@ public class FlyingEnemy : MonoBehaviour
     {
         inRange = Physics2D.OverlapCircle(transform.position, range, playerLayer);
 
-        if (inRange)
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        //if (foot.IsTouching(head))
-        //{
-        //    //Debug.Log("here");
-        //    health--;
-        //}
-        //if (health == 0)
-        //{
-        //    this.gameObject.SetActive(false);
-        //}
+		if (inRange) 
+		{
+			if (transform.position.x < player.transform.position.x) 
+				_anim_control.setFacing ("Left");
+			else
+				_anim_control.setFacing ("Right");
+			
+			transform.position = Vector3.MoveTowards (transform.position, player.transform.position, speed * Time.deltaTime);
+		}
+
+		if (enemy.IsTouching(sword))
+		{
+			Debug.Log ("hit");
+			StartCoroutine(hit());
+			StartCoroutine(Flash());
+		}
+
+		if (health == 0) 
+		{
+			gameObject.SetActive (false);
+		}
 	}
 
     void OnDrawGizmosSelected ()
     {
         Gizmos.DrawSphere(transform.position, range);
     }
+
+	IEnumerator hit() 
+	{
+		health--;
+		yield return new WaitForSeconds(1.0f);
+	}
+	IEnumerator Flash() {
+		for (int i = 0; i < 2; i++) {
+			this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+			yield return new WaitForSeconds(0.5f);
+			this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+			yield return new WaitForSeconds(0.5f);
+		}
+	}
 }

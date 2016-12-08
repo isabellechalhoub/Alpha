@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 	public AudioClip menuSong;
 	public AudioClip L1Song;
 	public AudioClip L2Song;
+	public AudioClip L3Song;
 	public AudioClip deathSong;
 	public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
 	public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
