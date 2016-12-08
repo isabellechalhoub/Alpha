@@ -402,7 +402,9 @@ public class PlayerController : MonoBehaviour
 		}
         else if (col.tag.Equals("Switch"))
         {
-            OpenGate();
+            playerControl = false;
+            animator.SetBool("isIdle", true);
+            winPanel.SetActive(true);
         }
 
         #region Collectables
