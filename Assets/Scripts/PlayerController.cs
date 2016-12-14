@@ -502,7 +502,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Flash() 
     {
-        for (int i = 0; i < 2; i++) 
+        for (int i = 0; i < 1; i++) 
             {
             this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
             yield return new WaitForSeconds(0.25f);
@@ -514,6 +514,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator fallingPlat(Collider2D col) 
     {
         Rigidbody2D rb2d = col.gameObject.GetComponentInParent<Rigidbody2D>();
+        col.enabled = false;
         yield return new WaitForSeconds(0.5f);
         rb2d.isKinematic = false;
         yield return 0;
