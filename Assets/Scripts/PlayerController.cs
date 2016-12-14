@@ -105,8 +105,7 @@ public class PlayerController : MonoBehaviour
 		setUpUI ();
 
         int level = PlayerPrefs.GetInt("Level");
-        if (level == 1)
-            gameObject.transform.position = Checkpoint.instance.spawn;
+        gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -488,7 +487,7 @@ public class PlayerController : MonoBehaviour
 		gameOverPanel.SetActive(true);
 		SoundManager.instance.PlayDeathMusic();
 		RemoveUI();
-	}
+    }
 
 	// Stops the camera follow and reduces health
 	private void PlayerFallDeath()
@@ -499,7 +498,7 @@ public class PlayerController : MonoBehaviour
 		gameOverPanel.SetActive(true);
 		RemoveUI();
 		SoundManager.instance.PlayDeathMusic();
-	}
+    }
 
     IEnumerator Flash() 
     {
@@ -577,12 +576,5 @@ public class PlayerController : MonoBehaviour
 		else
 			shellUI.SetActive (false);
 	}
-
-    void OpenGate()
-    {
-        gateFront.transform.rotation = new Quaternion(0f, 90f, 0f,gateBack.transform.rotation.w);
-        gateBack.transform.rotation = new Quaternion(0f, 90f, 0f, gateBack.transform.rotation.w);
-        mv.ChangeEnd();
-    }
 #endregion
 }

@@ -38,13 +38,13 @@ public class GameManager : MonoBehaviour
 	public void ExitLevel()
 	{
 		resetUI ();
+        Checkpoint.instance.setOriginal();
         SceneManager.LoadScene(0);
 	}
 
 	// Even handling for Exit game button on main menu
 	public void ExitGame()
 	{
-		resetUI ();
 		Application.Quit();
 	}
 
@@ -52,11 +52,13 @@ public class GameManager : MonoBehaviour
 	public void Play()
 	{
 		PlayerPrefs.SetInt ("Level", 1);
+        Checkpoint.instance.setOriginal();
         SceneManager.LoadScene(1);
 	}
 
     public void NextLevel()
     {
+        Checkpoint.instance.setOriginal();
         if (SceneManager.GetActiveScene().name.Equals("L1"))
         {
             PlayerPrefs.SetInt("Level", 2);

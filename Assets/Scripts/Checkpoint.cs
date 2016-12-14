@@ -21,20 +21,20 @@ public class Checkpoint : MonoBehaviour {
 
 		//Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
 		DontDestroyOnLoad(gameObject);
-	}
+
+        spawn = new Vector3(-1538f, -1920f, 0);
+    }
 
 	void Start()
 	{
-		if (PlayerPrefs.GetInt ("Level") == 1)
-			spawn = new Vector3 (-1538f, -1920f, 0);
-		else if (PlayerPrefs.GetInt ("Level") == 2)
-			spawn = new Vector3 (-948f, -3327f, 0);
-		else if (PlayerPrefs.GetInt ("Level") == 3) {
-			spawn = new Vector3 (-1627f, -1873f, 0);
-		}
+
 	}
 	public void UpdateSpawn(Vector3 tr)
 	{
 		spawn = tr;
 	}
+    public void setOriginal()
+    {
+        spawn = new Vector3(-1538f, -1920f, 0);
+    }
 }
