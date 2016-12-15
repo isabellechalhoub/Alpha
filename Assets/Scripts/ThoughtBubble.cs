@@ -12,7 +12,13 @@ public class ThoughtBubble : MonoBehaviour {
 	public Sprite jar;
 	public Sprite lunchbox;
 	public Sprite gopher;
-	public float fadeTime;
+    public Sprite lvl2;
+    public Sprite shoot;
+    public Sprite gb;
+    public Sprite journal;
+    public Sprite photo;
+    public Sprite shell;
+    public float fadeTime;
 	public float awakeTime;
 	Color currColor;
 	private bool In;
@@ -55,6 +61,24 @@ public class ThoughtBubble : MonoBehaviour {
 			case "Gopher":
 				gameObject.GetComponent<SpriteRenderer>().sprite = gopher;
 				break;
+            case "Level 2":
+                gameObject.GetComponent<SpriteRenderer>().sprite = lvl2;
+                break;
+            case "Shooting":
+                gameObject.GetComponent<SpriteRenderer>().sprite = shoot;
+                break;
+            case "Gameboy":
+                gameObject.GetComponent<SpriteRenderer>().sprite = gb;
+                break;
+            case "Journal":
+                gameObject.GetComponent<SpriteRenderer>().sprite = journal;
+                break;
+            case "Photo":
+                gameObject.GetComponent<SpriteRenderer>().sprite = photo;
+                break;
+            case "Shell":
+                gameObject.GetComponent<SpriteRenderer>().sprite = shell;
+                break;
         }
 		StartCoroutine (FadeIn());
     }

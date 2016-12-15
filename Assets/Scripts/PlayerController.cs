@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
 		setUpUI ();
 
         int level = PlayerPrefs.GetInt("Level");
-        gameObject.transform.position = Checkpoint.instance.spawn;
+        //gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -373,32 +373,75 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "KillZ") {
-			PlayerFallDeath ();
-		} else if (col.tag == "Damaging")
-			PlayerDamage (1);
-		else if (col.tag == "YouWin")
-			Winning ();
-		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.C))) {
-		} else if (col.tag == "Enemy")
-			PlayerDamage (1);
-		else if (col.tag == "FallingPlatform") {
-			StartCoroutine (fallingPlat (col));
-		} else if (col.tag.Equals ("Checkpoint")) {
-			Checkpoint.instance.UpdateSpawn (col.transform.position);
-		} else if (col.tag.Equals ("Lvl1Bubble")) {
-			thought.ChangeBubble("Level 1");
-		} else if (col.tag.Equals ("PatrolBubble")) {
-			thought.ChangeBubble("Patrol");
-		} else if (col.tag.Equals ("BanjoBubble")) {
-			thought.ChangeBubble("Banjo");
-		} else if (col.tag.Equals ("GopherBubble")) {
-			thought.ChangeBubble("Gopher");
-		} else if (col.tag.Equals ("LunchboxBubble")) {
-			thought.ChangeBubble("Lunchbox");
-		}  else if (col.tag.Equals ("JarBubble")) {
-			thought.ChangeBubble("Jar");
-		}
+        if (col.tag == "KillZ")
+        {
+            PlayerFallDeath();
+        }
+        else if (col.tag == "Damaging")
+            PlayerDamage(1);
+        else if (col.tag == "YouWin")
+            Winning();
+        else if (col.tag == "Enemy" && (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C)))
+        {
+        }
+        else if (col.tag == "Enemy")
+            PlayerDamage(1);
+        else if (col.tag == "FallingPlatform")
+        {
+            StartCoroutine(fallingPlat(col));
+        }
+        else if (col.tag.Equals("Checkpoint"))
+        {
+            Checkpoint.instance.UpdateSpawn(col.transform.position);
+        }
+        else if (col.tag.Equals("Lvl1Bubble"))
+        {
+            thought.ChangeBubble("Level 1");
+        }
+        else if (col.tag.Equals("PatrolBubble"))
+        {
+            thought.ChangeBubble("Patrol");
+        }
+        else if (col.tag.Equals("BanjoBubble"))
+        {
+            thought.ChangeBubble("Banjo");
+        }
+        else if (col.tag.Equals("GopherBubble"))
+        {
+            thought.ChangeBubble("Gopher");
+        }
+        else if (col.tag.Equals("LunchboxBubble"))
+        {
+            thought.ChangeBubble("Lunchbox");
+        }
+        else if (col.tag.Equals("JarBubble"))
+        {
+            thought.ChangeBubble("Jar");
+        }
+        else if (col.tag.Equals("Lvl2Bubble"))
+        {
+            thought.ChangeBubble("Level 2");
+        }
+        else if (col.tag.Equals("ShootBubble"))
+        {
+            thought.ChangeBubble("Shooting");
+        }
+        else if (col.tag.Equals("JournalBubble"))
+        {
+            thought.ChangeBubble("Journal");
+        }
+        else if (col.tag.Equals("GBBubble"))
+        {
+            thought.ChangeBubble("Gameboy");
+        }
+        else if (col.tag.Equals("PhotoBubble"))
+        {
+            thought.ChangeBubble("Photo");
+        }
+        else if (col.tag.Equals("ShellBubble"))
+        {
+            thought.ChangeBubble("Shell");
+        }
         else if (col.tag.Equals("Switch"))
         {
             playerControl = false;
@@ -406,42 +449,64 @@ public class PlayerController : MonoBehaviour
             winPanel.SetActive(true);
         }
 
+        else if (col.tag.Equals("bullet"))
+        {
+            if (!shieldin)
+            {
+                PlayerDamage(1);
+                //Destroy(col.gameObject);
+            }
+            Destroy(col.gameObject);
+            //else
+            //{
+            //    col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.transform.right * 15, ForceMode2D.Impulse);
+            //}
+        }
+
         #region Collectables
-        else if (col.tag.Equals("Collectable")) {
-            if (col.name.Equals("Journal")) {
+        else if (col.tag.Equals("Collectable"))
+        {
+            if (col.name.Equals("Journal"))
+            {
                 journal.SetActive(false);
                 journalUI.SetActive(true);
-				PlayerPrefs.SetInt("Journal", 1);
+                PlayerPrefs.SetInt("Journal", 1);
             }
-            else if (col.name.Equals("Jar")) {
+            else if (col.name.Equals("Jar"))
+            {
                 jar.SetActive(false);
                 jarUI.SetActive(true);
-				PlayerPrefs.SetInt("Jar", 1);
+                PlayerPrefs.SetInt("Jar", 1);
             }
-            else if (col.name.Equals("Lunchbox")) {
+            else if (col.name.Equals("Lunchbox"))
+            {
                 lunchbox.SetActive(false);
                 lunchboxUI.SetActive(true);
-				PlayerPrefs.SetInt("Lunchbox", 1);
+                PlayerPrefs.SetInt("Lunchbox", 1);
             }
-            else if (col.name.Equals("Photo")) {
+            else if (col.name.Equals("Photo"))
+            {
                 photo.SetActive(false);
                 photoUI.SetActive(true);
-				PlayerPrefs.SetInt("Photo", 1);
+                PlayerPrefs.SetInt("Photo", 1);
             }
-            else if (col.name.Equals("Plushie")) {
+            else if (col.name.Equals("Plushie"))
+            {
                 plushie.SetActive(false);
                 plushieUI.SetActive(true);
-				PlayerPrefs.SetInt("Plushie", 1);
+                PlayerPrefs.SetInt("Plushie", 1);
             }
-            else if (col.name.Equals("GameBoy")) {
+            else if (col.name.Equals("GameBoy"))
+            {
                 gameboy.SetActive(false);
                 gameboyUI.SetActive(true);
-				PlayerPrefs.SetInt("Gameboy", 1);
+                PlayerPrefs.SetInt("Gameboy", 1);
             }
-            else if (col.name.Equals("Shell")) {
+            else if (col.name.Equals("Shell"))
+            {
                 shell.SetActive(false);
                 shellUI.SetActive(true);
-				PlayerPrefs.SetInt("Shell", 1);
+                PlayerPrefs.SetInt("Shell", 1);
             }
             #endregion
         }
