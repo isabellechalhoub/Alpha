@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
     #region Vars
-	public Wind windObject;
-	public BoxCollider2D gateColl;
+    private bool stop;
+	public BoxCollider2D gate1Coll;
+    public BoxCollider2D gate2Coll;
     public MovingPlatform mv;
-    public GateLogic gateFront;
-    public GateLogic gateBack;
+    public GateLogic gate1Front;
+    public GateLogic gate1Back;
+    public GateLogic gate2Front;
+    public GateLogic gate2Back;
     public ThoughtBubble thought;
     private Animator animator;
 	public GameObject gameCamera;
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject gameOverPanel;
     public GameObject pausePanel;
     public GameObject winPanel;
+    public GameObject quit;
 	public float walkSpeed = 3;
 	public float gravity = -35;
 	public float jumpHeight = 2;
@@ -66,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void Start ()
     {
+        stop = false;
         shield = GameObject.FindGameObjectWithTag("Shield");
         sword = GameObject.FindGameObjectWithTag("Sword");
 		coll = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D> ();
@@ -95,6 +100,8 @@ public class PlayerController : MonoBehaviour
         sword.SetActive(false);
         shield.SetActive(false);
 
+        quit.SetActive(false);
+
         gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
 		winPanel.SetActive(false);
 		gameOverPanel.SetActive(false);
@@ -107,7 +114,7 @@ public class PlayerController : MonoBehaviour
 		setUpUI ();
 
         int level = PlayerPrefs.GetInt("Level");
-        //gameObject.transform.position = Checkpoint.instance.spawn;
+        gameObject.transform.position = Checkpoint.instance.spawn;
     }
 
 	void Update ()
@@ -117,6 +124,11 @@ public class PlayerController : MonoBehaviour
 			Vector3 velocity = PlayerInput ();
 			_controller.move (velocity * Time.deltaTime);
 		}
+        else if (stop)
+        {
+            Vector3 velocity = new Vector3(0, -50, 0);
+            _controller.move(velocity * Time.deltaTime);
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -375,51 +387,97 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "KillZ") {
-			PlayerFallDeath ();
-		} else if (col.tag == "Damaging")
-			PlayerDamage (1);
-		else if (col.tag == "YouWin")
-			Winning ();
-		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.C))) {
-		} else if (col.tag == "Enemy")
-			PlayerDamage (1);
-		else if (col.tag == "FallingPlatform") {
-			StartCoroutine (fallingPlat (col));
-		} else if (col.tag.Equals ("Checkpoint")) {
-			Checkpoint.instance.UpdateSpawn (col.transform.position);
-		} else if (col.tag.Equals ("Lvl1Bubble")) {
-			thought.ChangeBubble ("Level 1");
-		} else if (col.tag.Equals ("PatrolBubble")) {
-			thought.ChangeBubble ("Patrol");
-		} else if (col.tag.Equals ("BanjoBubble")) {
-			thought.ChangeBubble ("Banjo");
-		} else if (col.tag.Equals ("GopherBubble")) {
-			thought.ChangeBubble ("Gopher");
-		} else if (col.tag.Equals ("LunchboxBubble")) {
-			thought.ChangeBubble ("Lunchbox");
-		} else if (col.tag.Equals ("JarBubble")) {
-			thought.ChangeBubble ("Jar");
-		} else if (col.tag.Equals ("Lvl2Bubble")) {
-			thought.ChangeBubble ("Level 2");
-		} else if (col.tag.Equals ("ShootBubble")) {
-			thought.ChangeBubble ("Shooting");
-		} else if (col.tag.Equals ("JournalBubble")) {
-			thought.ChangeBubble ("Journal");
-		} else if (col.tag.Equals ("GBBubble")) {
-			thought.ChangeBubble ("Gameboy");
-		} else if (col.tag.Equals ("PhotoBubble")) {
-			thought.ChangeBubble ("Photo");
-		} else if (col.tag.Equals ("ShellBubble")) {
-			thought.ChangeBubble ("Shell");
-		} else if (col.tag.Equals ("GateSwitch")) {
-			gateFront.startRotate ();
-			gateBack.startRotate ();
-			gateColl.enabled = false;
-			col.enabled = false;
-		} else if (col.tag.Equals ("WindSwitch")) {
-			windObject.TurnOff ();
-		}
+        if (col.tag == "KillZ")
+        {
+            PlayerFallDeath();
+        }
+        else if (col.tag == "Damaging")
+            PlayerDamage(1);
+        else if (col.tag == "YouWin")
+            Winning();
+        else if (col.tag == "NextLevel")
+            NextLevel();
+        else if (col.tag == "Enemy" && (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C)))
+        {
+        }
+        else if (col.tag == "Enemy")
+            PlayerDamage(1);
+        else if (col.tag == "FallingPlatform")
+        {
+            StartCoroutine(fallingPlat(col));
+        }
+        else if (col.tag.Equals("Checkpoint"))
+        {
+            Checkpoint.instance.UpdateSpawn(col.transform.position);
+        }
+        else if (col.tag.Equals("Lvl1Bubble"))
+        {
+            thought.ChangeBubble("Level 1");
+        }
+        else if (col.tag.Equals("PatrolBubble"))
+        {
+            thought.ChangeBubble("Patrol");
+        }
+        else if (col.tag.Equals("BanjoBubble"))
+        {
+            thought.ChangeBubble("Banjo");
+        }
+        else if (col.tag.Equals("GopherBubble"))
+        {
+            thought.ChangeBubble("Gopher");
+        }
+        else if (col.tag.Equals("LunchboxBubble"))
+        {
+            thought.ChangeBubble("Lunchbox");
+        }
+        else if (col.tag.Equals("JarBubble"))
+        {
+            thought.ChangeBubble("Jar");
+        }
+        else if (col.tag.Equals("Lvl2Bubble"))
+        {
+            thought.ChangeBubble("Level 2");
+        }
+        else if (col.tag.Equals("ShootBubble"))
+        {
+            thought.ChangeBubble("Shooting");
+        }
+        else if (col.tag.Equals("JournalBubble"))
+        {
+            thought.ChangeBubble("Journal");
+        }
+        else if (col.tag.Equals("GBBubble"))
+        {
+            thought.ChangeBubble("Gameboy");
+        }
+        else if (col.tag.Equals("PhotoBubble"))
+        {
+            thought.ChangeBubble("Photo");
+        }
+        else if (col.tag.Equals("ShellBubble"))
+        {
+            thought.ChangeBubble("Shell");
+        }
+        else if (col.tag.Equals("GateSwitch1"))
+        {
+            gate1Front.startRotate();
+            gate1Back.startRotate();
+            gate1Coll.enabled = false;
+            col.enabled = false;
+        }
+        else if (col.tag.Equals("GateSwitch2"))
+        {
+            gate2Front.startRotate();
+            gate2Back.startRotate();
+            gate2Coll.enabled = false;
+            col.enabled = false;
+        }
+        else if (col.tag.Equals("stop"))
+        {
+            playerControl = false;
+            stop = true;
+            RemoveUI();
+        }
 
         else if (col.tag.Equals("bullet"))
         {
@@ -428,10 +486,9 @@ public class PlayerController : MonoBehaviour
                 PlayerDamage(1);
                 Destroy(col.gameObject);
             }
-            //Destroy(col.gameObject);
             else
             {
-                col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.transform.right * 30, ForceMode2D.Impulse);
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.transform.right * 37.5f, ForceMode2D.Impulse);
             }
         }
 
@@ -486,10 +543,18 @@ public class PlayerController : MonoBehaviour
 		
 	private void Winning()
 	{
-		playerControl = false;
+        animator.SetBool("isIdle", true);
+        animator.SetBool("isFalling", false);
+        animator.SetBool("isWalking", false);
+        quit.SetActive(true);
+	}
+
+    private void NextLevel()
+    {
+        playerControl = false;
         animator.SetBool("isIdle", true);
         gm.NextLevel();
-	}
+    }
 
 	// Changes player health when damage is taken. checks for death
 	private void PlayerDamage(int damage)
