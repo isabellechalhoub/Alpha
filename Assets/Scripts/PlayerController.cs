@@ -454,13 +454,13 @@ public class PlayerController : MonoBehaviour
             if (!shieldin)
             {
                 PlayerDamage(1);
-                //Destroy(col.gameObject);
+                Destroy(col.gameObject);
             }
-            Destroy(col.gameObject);
-            //else
-            //{
-            //    col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.transform.right * 15, ForceMode2D.Impulse);
-            //}
+            //Destroy(col.gameObject);
+            else
+            {
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.transform.right * 30, ForceMode2D.Impulse);
+            }
         }
 
         #region Collectables
