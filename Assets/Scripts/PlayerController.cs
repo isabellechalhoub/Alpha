@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour 
 {
     #region Vars
+	public Wind windObject;
+	public BoxCollider2D gateColl;
     public MovingPlatform mv;
-    public GameObject gateFront;
-    public GameObject gateBack;
+    public GateLogic gateFront;
+    public GateLogic gateBack;
     public ThoughtBubble thought;
     private Animator animator;
 	public GameObject gameCamera;
@@ -373,81 +375,51 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-        if (col.tag == "KillZ")
-        {
-            PlayerFallDeath();
-        }
-        else if (col.tag == "Damaging")
-            PlayerDamage(1);
-        else if (col.tag == "YouWin")
-            Winning();
-        else if (col.tag == "Enemy" && (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C)))
-        {
-        }
-        else if (col.tag == "Enemy")
-            PlayerDamage(1);
-        else if (col.tag == "FallingPlatform")
-        {
-            StartCoroutine(fallingPlat(col));
-        }
-        else if (col.tag.Equals("Checkpoint"))
-        {
-            Checkpoint.instance.UpdateSpawn(col.transform.position);
-        }
-        else if (col.tag.Equals("Lvl1Bubble"))
-        {
-            thought.ChangeBubble("Level 1");
-        }
-        else if (col.tag.Equals("PatrolBubble"))
-        {
-            thought.ChangeBubble("Patrol");
-        }
-        else if (col.tag.Equals("BanjoBubble"))
-        {
-            thought.ChangeBubble("Banjo");
-        }
-        else if (col.tag.Equals("GopherBubble"))
-        {
-            thought.ChangeBubble("Gopher");
-        }
-        else if (col.tag.Equals("LunchboxBubble"))
-        {
-            thought.ChangeBubble("Lunchbox");
-        }
-        else if (col.tag.Equals("JarBubble"))
-        {
-            thought.ChangeBubble("Jar");
-        }
-        else if (col.tag.Equals("Lvl2Bubble"))
-        {
-            thought.ChangeBubble("Level 2");
-        }
-        else if (col.tag.Equals("ShootBubble"))
-        {
-            thought.ChangeBubble("Shooting");
-        }
-        else if (col.tag.Equals("JournalBubble"))
-        {
-            thought.ChangeBubble("Journal");
-        }
-        else if (col.tag.Equals("GBBubble"))
-        {
-            thought.ChangeBubble("Gameboy");
-        }
-        else if (col.tag.Equals("PhotoBubble"))
-        {
-            thought.ChangeBubble("Photo");
-        }
-        else if (col.tag.Equals("ShellBubble"))
-        {
-            thought.ChangeBubble("Shell");
-        }
-        else if (col.tag.Equals("Switch"))
-        {
-            playerControl = false;
-            animator.SetBool("isIdle", true);
-            winPanel.SetActive(true);
-        }
+		if (col.tag == "KillZ") {
+			PlayerFallDeath ();
+		} else if (col.tag == "Damaging")
+			PlayerDamage (1);
+		else if (col.tag == "YouWin")
+			Winning ();
+		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey (KeyCode.C))) {
+		} else if (col.tag == "Enemy")
+			PlayerDamage (1);
+		else if (col.tag == "FallingPlatform") {
+			StartCoroutine (fallingPlat (col));
+		} else if (col.tag.Equals ("Checkpoint")) {
+			Checkpoint.instance.UpdateSpawn (col.transform.position);
+		} else if (col.tag.Equals ("Lvl1Bubble")) {
+			thought.ChangeBubble ("Level 1");
+		} else if (col.tag.Equals ("PatrolBubble")) {
+			thought.ChangeBubble ("Patrol");
+		} else if (col.tag.Equals ("BanjoBubble")) {
+			thought.ChangeBubble ("Banjo");
+		} else if (col.tag.Equals ("GopherBubble")) {
+			thought.ChangeBubble ("Gopher");
+		} else if (col.tag.Equals ("LunchboxBubble")) {
+			thought.ChangeBubble ("Lunchbox");
+		} else if (col.tag.Equals ("JarBubble")) {
+			thought.ChangeBubble ("Jar");
+		} else if (col.tag.Equals ("Lvl2Bubble")) {
+			thought.ChangeBubble ("Level 2");
+		} else if (col.tag.Equals ("ShootBubble")) {
+			thought.ChangeBubble ("Shooting");
+		} else if (col.tag.Equals ("JournalBubble")) {
+			thought.ChangeBubble ("Journal");
+		} else if (col.tag.Equals ("GBBubble")) {
+			thought.ChangeBubble ("Gameboy");
+		} else if (col.tag.Equals ("PhotoBubble")) {
+			thought.ChangeBubble ("Photo");
+		} else if (col.tag.Equals ("ShellBubble")) {
+			thought.ChangeBubble ("Shell");
+		} else if (col.tag.Equals ("GateSwitch")) {
+			gateFront.startRotate ();
+			gateBack.startRotate ();
+			gateColl.enabled = false;
+			col.enabled = false;
+		} else if (col.tag.Equals ("WindSwitch")) {
+			windObject.TurnOff ();
+		}
 
         else if (col.tag.Equals("bullet"))
         {
